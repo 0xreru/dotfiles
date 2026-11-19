@@ -22,3 +22,22 @@ nctf() {
   cd "$dir"
   echo "Ready: $dir"
 }
+export PATH="$HOME/.pdtm/go/bin:$HOME/go/bin:/usr/local/go/bin:$HOME/.local/bin:$PATH"
+alias pyenv="source $HOME/venvs/pentest/bin/activate"
+
+# Universal lab VPN switcher & generic tinyproxy bridge
+vpn() {
+  if [ -z "$1" ]; then
+    echo "Usage: vpn NAME"
+    echo "Available profiles:"
+    find "$HOME/vpn" -maxdepth 1 -name '*.ovpn' -printf '%f\n' | sed 's/\.ovpn$//' | sort
+    return 1
+  fi
+  local file="$HOME/vpn/$1.ovpn"
+  if [ ! -f "$file" ]; then
+    echo "Profile not found: $file"
+    return 1
+  fi
+  sudo openvpn "$file"
+}
+alias labproxy='tinyproxy -d -c "$HOME/.config/tinyproxy.conf"'
