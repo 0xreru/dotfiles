@@ -1,0 +1,120 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "small",
+    "color": {
+      "1": "#7aa2f7",
+      "2": "#bb9af7"
+    },
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 3
+    }
+  },
+  "display": {
+    "separator": " ❯ ",
+    "color": {
+      "keys": "#7aa2f7",
+      "title": "#bb9af7",
+      "output": "#c0caf5",
+      "separator": "#565f89"
+    },
+    "key": {
+      "type": "string",
+      "width": 14
+    },
+    "bar": {
+      "width": 10,
+      "char": {
+        "elapsed": "━",
+        "total": "─"
+      },
+      "border": {
+        "left": "",
+        "right": ""
+      },
+      "color": {
+        "total": "#414868"
+      }
+    },
+    "percent": {
+      "type": 3,
+      "color": {
+        "green": "#9ece6a",
+        "yellow": "#e0af68",
+        "red": "#f7768e"
+      }
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      "color": {
+        "user": "#7aa2f7",
+        "at": "#565f89",
+        "host": "#bb9af7"
+      }
+    },
+    {
+      "type": "separator",
+      "string": "─",
+      "outputColor": "#414868"
+    },
+    {
+      "type": "os",
+      "key": "\uf306  OS",
+      "keyColor": "#7aa2f7"
+    },
+    {
+      "type": "kernel",
+      "key": "\uf17c  Kernel",
+      "keyColor": "#7aa2f7"
+    },
+    {
+      "type": "packages",
+      "key": "\uf1b2  Packages",
+      "keyColor": "#7aa2f7"
+    },
+    {
+      "type": "shell",
+      "key": "\uf120  Shell",
+      "keyColor": "#7dcfff"
+    },
+    {
+      "type": "uptime",
+      "key": "\uf017  Uptime",
+      "keyColor": "#7dcfff"
+    },
+    "break",
+    {
+      "type": "memory",
+      "key": "\uf2db  Memory",
+      "keyColor": "#bb9af7"
+    },
+    {
+      "type": "swap",
+      "key": "\uf0ec  Swap",
+      "keyColor": "#bb9af7"
+    },
+    {
+      "type": "disk",
+      "key": "\uf0a0  Disk (/)",
+      "folders": "/",
+      "keyColor": "#9ece6a"
+    },
+    {
+      "type": "localip",
+      "key": "\uf0ac  Local IP",
+      "showIpv4": true,
+      "showIpv6": false,
+      "compact": true,
+      "keyColor": "#73daca"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle"
+    }
+  ]
+}
